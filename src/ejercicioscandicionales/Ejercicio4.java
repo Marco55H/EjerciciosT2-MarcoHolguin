@@ -8,7 +8,7 @@ public class Ejercicio4 {
 		Scanner sc = new Scanner(System.in);
 
 		int num, num1, num2;
-		String part1 = "", part2 = "";
+		String part1 = "", part2 = "",cadena="";
 
 		System.out.println("Introduce el número");
 		num = sc.nextInt();
@@ -17,7 +17,39 @@ public class Ejercicio4 {
 			num2 = num % 10;
 			num1 = num / 10;
 
-			if (num != 10 && num != 11 && num != 12 && num != 13 && num != 14 && num != 15) {
+			switch (num1) {
+
+			case 1:
+				part1 = "dieci";
+				break;
+
+			case 2:
+				part1 = "veinti";
+				break;
+			case 3:
+				part1 = "treinta y ";
+				break;
+			case 4:
+				part1 = "cuarenta y ";
+				break;
+			case 5:
+				part1 = "cincuenta y ";
+				break;
+			case 6:
+				part1 = "sesenta y ";
+				break;
+			case 7:
+				part1 = "setenta y ";
+				break;
+			case 8:
+				part1 = "ochenta y ";
+				break;
+			case 9:
+				part1 = "noventa y ";
+				break;
+				
+			}
+				
 				switch (num2) {
 
 				case 1:
@@ -47,92 +79,61 @@ public class Ejercicio4 {
 				case 9:
 					part2 = "nueve";
 					break;
-				}
 			}
-			if (num != 10 && num != 11 && num != 12 && num != 13 && num != 14 && num != 15) {
-				switch (num1) {
-
-				case 1:
-					part1 = "dieci";
-					break;
-
-				case 2:
-					part1 = "veinti";
-					break;
-				case 3:
-					part1 = "treinta y ";
-					break;
-				case 4:
-					part1 = "cuarenta y ";
-					break;
-				case 5:
-					part1 = "cincuenta y ";
-					break;
-				case 6:
-					part1 = "sesenta y ";
-					break;
-				case 7:
-					part1 = "setenta y ";
-					break;
-				case 8:
-					part1 = "ochenta y ";
-					break;
-				case 9:
-					part1 = "noventa y ";
-					break;
-				}
+				
+				cadena=part1+part2;
 				switch (num) {
 
 				case 10:
-					part1 = "diez";
+					cadena = "diez";
 					break;
 				case 11:
-					part1 = "once";
+					cadena = "once";
 
 				case 12:
-					part1 = "doce";
+					cadena = "doce";
 					break;
 				case 13:
-					part1 = "trece";
+					cadena = "trece";
 					break;
 				case 14:
-					part1 = "catorce";
+					cadena = "catorce";
 					break;
 				case 15:
-					part1 = "quince";
+					cadena = "quince";
 					break;
 				case 20:
-					part1 = "veinte";
+					cadena = "veinte";
 					break;
 				case 30:
-					part1 = "treinta";
+					cadena = "treinta";
 					break;
 				case 40:
-					part1 = "cuarenta";
+					cadena = "cuarenta";
 					break;
 				case 50:
-					part1 = "cincuenta";
+					cadena = "cincuenta";
 					break;
 				case 60:
-					part1 = "sesenta";
+					cadena = "sesenta";
 					break;
 				case 70:
-					part1 = "setenta";
+					cadena = "setenta";
 					break;
 				case 80:
-					part1 = "ochenta";
+					cadena = "ochenta";
 					break;
 				case 90:
-					part1 = "noventa";
+					cadena = "noventa";
 					break;
 
 				}
-			}
-
-		} else {
+				
+			
+			} else {
 			System.out.println("El número no se encuentra en el rango");
 		}
-		System.out.println("El número es " + part1 + part2);
+		System.out.println("El número es " +cadena);
 		sc.close();
 	}
 }
