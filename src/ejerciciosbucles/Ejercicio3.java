@@ -3,30 +3,29 @@ package ejerciciosbucles;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-public static void main(String[] args) {
-	
-	Scanner sc=new Scanner(System.in);
-	int num;
-	
-	System.out.println("De que tamaño quieres tu triángulo?");
-	num=sc.nextInt();
-	
-	for (int i=1;i<num ; i++) {
+	  public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        int num;
 
-		for (int j=1 ;j<num-i ;j--) {
-			System.out.println(".");	
-		}
-		
-		for(int k=num;k>i;k++) {
-			
-		System.out.println("*.");;	
-	 
-			
-		}
-		
-	}
+	        System.out.print("Inumgresa un número para la base y altura del triángulo: ");     
+	       
+	 num = scanner.nextInt();
 
-	sc.close();
-}
-	
+	        for (int i = 1; i <= num; i++) {
+	            // Espacios en blanco antes de los asteriscos
+	            for (int j = 1; j <= num - i; j++) {
+	                System.out.print(" ");
+	            }
+
+	            // Asteriscos
+	            for (int k = 1; k <= i; k++) {
+	                System.out.print("* ");
+	            }
+
+	            // Cambiar de línea después de cada fila
+	            System.out.println();
+	        }
+
+	        scanner.close();
+	    }
 }

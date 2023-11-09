@@ -6,21 +6,25 @@ import java.util.Scanner;
 public class Ejercicio2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num, cantPrimo = 0;
+		int i, num, cantPrimo = 0;
+		
 		try {
 			System.out.println("Indique hasta que número quieres conocer los primos");
 			num = sc.nextInt();
 
-			for (int i = 2; i < num; i++) {
+			for (i = 2; i <= num; i++) {
+
 				for (int j = 2; j <= i / 2; j++) {
 
-					if (num % j == 0) {
-						cantPrimo++;
-						break;
-					} // if
-				} // for
-			} // for
+					if (i % j == 0) {
 
+						cantPrimo++;
+						
+					} // if
+
+				} // for
+
+			}
 			System.out.println("Hay " + cantPrimo + " números primos entre el 1 y el " + num);
 		} // try
 		catch (InputMismatchException e) {
