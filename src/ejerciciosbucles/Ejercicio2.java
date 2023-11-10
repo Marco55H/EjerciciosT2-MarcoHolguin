@@ -13,13 +13,13 @@ public class Ejercicio2 {
 			num = sc.nextInt();
 
 			for (i = 2; i <= num; i++) {
-
+				cantPrimo++;
 				for (int j = 2; j <= i / 2; j++) {
 
 					if (i % j == 0) {
 
-						cantPrimo++;
-						
+						cantPrimo--;
+						break;
 					} // if
 
 				} // for

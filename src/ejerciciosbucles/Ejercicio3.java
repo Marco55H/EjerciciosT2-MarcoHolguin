@@ -1,15 +1,21 @@
 package ejerciciosbucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio3 {
 	  public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-	        int num;
+	        Scanner sc = new Scanner(System.in);
+	        int num=0;
 
-	        System.out.print("Inumgresa un número para la base y altura del triángulo: ");     
+	        try {
+	        System.out.print("Ingresa un número para la base y altura del triángulo: ");     
 	       
-	 num = scanner.nextInt();
+	 num = sc.nextInt();
+	        }
+	        catch (InputMismatchException e){
+	        	System.out.println("Error de tipo introducido");
+	        }
 
 	        for (int i = 1; i <= num; i++) {
 	            // Espacios en blanco antes de los asteriscos
@@ -26,6 +32,6 @@ public class Ejercicio3 {
 	            System.out.println();
 	        }
 
-	        scanner.close();
+	        sc.close();
 	    }
 }
