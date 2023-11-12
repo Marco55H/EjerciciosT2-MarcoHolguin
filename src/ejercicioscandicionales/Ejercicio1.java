@@ -1,3 +1,6 @@
+//Entrada=20 || R.Esperado= no capicua  || R.Obtenido= no capicua
+//Entrada=1221 || R.Esperado= capicua  || R.Obtenido= capicua
+//Entrada=2 || R.Esperado= capicua  || R.Obtenido= capicua
 package ejercicioscandicionales;
 
 import java.util.Scanner;

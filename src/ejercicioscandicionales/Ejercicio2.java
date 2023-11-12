@@ -1,19 +1,25 @@
+//Entrada=21234567 || R.Esperado= r  || R.Obtenido= r
+//Entrada=12211221 || R.Esperado= s  || R.Obtenido= s
+//Entrada=22222222 || R.Esperado= j  || R.Obtenido= j
 package ejercicioscandicionales;
 
 import java.util.Scanner;
 
 public class Ejercicio2 {
 	public static void main(String[] args) {
-
+		// Inicialización de variables
 		int dni=0, resto=0;
 		char letra = 'O';
+		//Iniciamos escaner
 		Scanner sc = new Scanner(System.in);
 
+		//Pedimos el DNI numérico
 		System.out.println("Introduce tu número del DNI (8 cifras)");
 		dni = sc.nextInt();
 
 		if (dni > 9999999 && dni < 100000000) {
 			resto = dni % 23;
+			// Utiliza un switch para asignar la letra correspondiente según el resto
 			switch (resto) {
 			case 0:
 				letra = 'T';
@@ -87,6 +93,7 @@ public class Ejercicio2 {
 			}
 
 		}
+		//Presentamos el resultado
 		System.out.println("La letra del DNI "+dni+" es "+letra);
 sc.close();
 	}

@@ -1,22 +1,29 @@
+//Entrada=21 || R.Esperado= veintiuno  || R.Obtenido= veintiuno
+//Entrada=2 || R.Esperado= dos  || R.Obtenido= dos
+//Entrada=15 || R.Esperado= quince  || R.Obtenido= quince
 package ejercicioscandicionales;
 
 import java.util.Scanner;
 
 public class Ejercicio4 {
 	public static void main(String[] args) {
-
+		
+		//Iniciamos escaner
 		Scanner sc = new Scanner(System.in);
-
+		//Iniciamos variables
 		int num, num1, num2;
 		String part1 = "", part2 = "",cadena="";
-
+		//pedimos el número
 		System.out.println("Introduce el número");
 		num = sc.nextInt();
 
+		//El número tiene que estar entre 0 y 100
 		if (num >= 1 && num < 100) {
+			//Dividimos el número en sus dos cifras
 			num2 = num % 10;
 			num1 = num / 10;
 
+			//switch según la 1 cifa
 			switch (num1) {
 
 			case 1:
@@ -49,7 +56,7 @@ public class Ejercicio4 {
 				break;
 				
 			}
-				
+				//switch según la 2 cifra
 				switch (num2) {
 
 				case 1:
@@ -80,8 +87,9 @@ public class Ejercicio4 {
 					part2 = "nueve";
 					break;
 			}
-				
+				//Unimos las dos partes
 				cadena=part1+part2;
+				//Casos raros
 				switch (num) {
 
 				case 10:
@@ -129,11 +137,13 @@ public class Ejercicio4 {
 
 				}
 				
-			
+			//Si el numero no esta entre el 0 y el 100
 			} else {
 			System.out.println("El número no se encuentra en el rango");
 		}
+		//Resultado
 		System.out.println("El número es " +cadena);
+		//Cerramos escaner
 		sc.close();
 	}
 }
